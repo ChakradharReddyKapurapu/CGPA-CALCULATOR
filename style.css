@@ -1,0 +1,562 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    overflow-x:hidden;
+    color:white;
+}
+
+
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    animation:float 10s infinite alternate;
+}
+
+.c1{
+    width:300px;
+    height:300px;
+    background:#ff00ff;
+    top:-80px;
+    left:-80px;
+}
+
+.c2{
+    width:350px;
+    height:350px;
+    background:#00ffff;
+    bottom:-120px;
+    right:-120px;
+}
+
+.c3{
+    width:250px;
+    height:250px;
+    background:#00ff88;
+    top:40%;
+    left:60%;
+}
+
+.c4{
+    width:200px;
+    height:200px;
+    background:#ff9800;
+    bottom:20%;
+    left:20%;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+100%{
+transform:translateY(-40px);
+}
+
+}
+
+/* ===========================
+MAIN CONTAINER
+=========================== */
+
+.container{
+
+width:95%;
+max-width:1200px;
+
+margin:40px auto;
+
+padding:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.4);
+
+}
+
+/* ===========================
+HEADINGS
+=========================== */
+
+h1{
+
+text-align:center;
+
+font-size:42px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+background:linear-gradient(90deg,#00e5ff,#ff00ff,#00ff95);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+opacity:.8;
+
+margin-bottom:30px;
+
+}
+
+/* ===========================
+TABLE
+=========================== */
+
+.table{
+
+width:100%;
+
+overflow:auto;
+
+}
+
+.table-head,
+
+.row{
+
+display:grid;
+
+grid-template-columns:
+2fr
+1fr
+1fr
+1fr
+1fr
+80px;
+
+gap:12px;
+
+align-items:center;
+
+margin-bottom:15px;
+
+}
+
+.table-head{
+
+font-weight:600;
+
+color:#00ffff;
+
+padding-bottom:10px;
+
+border-bottom:2px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+INPUTS
+=========================== */
+
+input{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+input::placeholder{
+
+color:#ddd;
+
+}
+
+input:focus{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 15px cyan;
+
+}
+
+/* ===========================
+GRADE BOX
+=========================== */
+
+.grade,
+.gp{
+
+font-weight:bold;
+
+text-align:center;
+
+background:rgba(0,255,255,.15);
+
+}
+
+/* ===========================
+DELETE BUTTON
+=========================== */
+
+.delete{
+
+padding:12px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:12px;
+
+background:#ff1744;
+
+color:white;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.delete:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 20px red;
+
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin:35px 0;
+
+flex-wrap:wrap;
+
+}
+
+.buttons button{
+
+padding:15px 28px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+color:white;
+
+}
+
+#addBtn{
+
+background:linear-gradient(45deg,#00e676,#00c853);
+
+}
+
+#calcBtn{
+
+background:linear-gradient(45deg,#00b0ff,#2979ff);
+
+}
+
+#resetBtn{
+
+background:linear-gradient(45deg,#ff5252,#ff1744);
+
+}
+
+.buttons button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 15px 25px rgba(0,0,0,.4);
+
+}
+/* ===========================
+   RESULT CARD
+=========================== */
+
+.result-card{
+    margin-top:40px;
+    background:rgba(255,255,255,.08);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+
+.result-card h2{
+    margin-bottom:25px;
+    font-size:30px;
+    color:#00ffff;
+}
+
+/* ===========================
+   CGPA CIRCLE
+=========================== */
+
+.cgpa-circle{
+    width:220px;
+    height:220px;
+    margin:20px auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00e5ff,#2979ff,#00ff95,#ff00ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:rotateCircle 8s linear infinite;
+    box-shadow:
+        0 0 35px rgba(0,255,255,.5),
+        0 0 60px rgba(255,0,255,.3);
+}
+
+.inner-circle{
+    width:175px;
+    height:175px;
+    border-radius:50%;
+    background:#14213d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.inner-circle span{
+    font-size:42px;
+    font-weight:bold;
+    color:#00ffff;
+}
+
+.inner-circle p{
+    margin-top:8px;
+    font-size:18px;
+    color:#ddd;
+}
+
+@keyframes rotateCircle{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ===========================
+   DETAILS BOXES
+=========================== */
+
+.details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:35px;
+}
+
+.box{
+    min-width:220px;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,255,255,.3);
+}
+
+.box h3{
+    color:#00ffff;
+    margin-bottom:10px;
+}
+
+.box p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ===========================
+   GRADE TABLE
+=========================== */
+
+.grade-table{
+    margin-top:50px;
+}
+
+.grade-table h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#00ffff;
+}
+
+.grade-table table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.grade-table th{
+    background:#00bcd4;
+    color:white;
+    padding:15px;
+}
+
+.grade-table td{
+    text-align:center;
+    padding:14px;
+    background:rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.grade-table tr:hover td{
+    background:rgba(255,255,255,.15);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    opacity:.75;
+    font-size:15px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.table-head{
+    display:none;
+}
+
+.row{
+    grid-template-columns:1fr;
+    background:rgba(255,255,255,.08);
+    padding:18px;
+    border-radius:18px;
+}
+
+.buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.buttons button{
+    width:100%;
+    max-width:320px;
+}
+
+.cgpa-circle{
+    width:180px;
+    height:180px;
+}
+
+.inner-circle{
+    width:140px;
+    height:140px;
+}
+
+.inner-circle span{
+    font-size:34px;
+}
+
+.box{
+    width:100%;
+}
+
+}
+
+/* ===========================
+   EXTRA ANIMATIONS
+=========================== */
+
+.container{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0px);
+}
+
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+input:hover{
+    box-shadow:0 0 15px rgba(0,255,255,.35);
+}

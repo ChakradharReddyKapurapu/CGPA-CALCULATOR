@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>3D CGPA Calculator | R23</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background">
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+</div>
+
+<div class="container">
+
+<h1>
+<i class="fa-solid fa-graduation-cap"></i>
+CGPA Calculator
+</h1>
+
+<p class="subtitle">
+R23 Regulation Calculator
+</p>
+
+<div class="table">
+
+<div class="table-head">
+
+<div>Subject</div>
+<div>Credits</div>
+<div>Marks</div>
+<div>Grade</div>
+<div>GP</div>
+<div>Delete</div>
+
+</div>
+
+<div id="subjects">
+
+<div class="row">
+
+<input type="text"
+placeholder="Subject Name"
+class="subject">
+
+<input type="number"
+placeholder="Credits"
+class="credit"
+min="1"
+max="10">
+
+<input type="number"
+placeholder="Marks"
+class="marks"
+min="0"
+max="100">
+
+<input type="text"
+class="grade"
+readonly>
+
+<input type="text"
+class="gp"
+readonly>
+
+<button class="delete">
+<i class="fa-solid fa-trash"></i>
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button id="addBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Subject
+
+</button>
+
+<button id="calcBtn">
+
+<i class="fa-solid fa-calculator"></i>
+
+Calculate CGPA
+
+</button>
+
+<button id="resetBtn">
+
+<i class="fa-solid fa-rotate-right"></i>
+
+Reset
+
+</button>
+
+</div>
+
+<div class="result-card">
+
+<h2>Your Result</h2>
+
+<div class="cgpa-circle">
+
+<div class="inner-circle">
+
+<span id="cgpa">
+0.00
+</span>
+
+<p>CGPA</p>
+
+</div>
+
+</div>
+
+<div class="details">
+
+<div class="box">
+
+<h3>Total Credits</h3>
+
+<p id="credits">
+0
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Total Grade Points</h3>
+
+<p id="points">
+0
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Overall Grade</h3>
+
+<p id="overallGrade">
+-
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="grade-table">
+
+<h2>Grade Reference</h2>
+
+<table>
+
+<tr>
+
+<th>Marks</th>
+
+<th>Grade</th>
+
+<th>Grade Point</th>
+
+</tr>
+
+<tr>
+
+<td>90 - 100</td>
+
+<td>S</td>
+
+<td>10</td>
+
+</tr>
+
+<tr>
+
+<td>80 - 89</td>
+
+<td>A</td>
+
+<td>9</td>
+
+</tr>
+
+<tr>
+
+<td>70 - 79</td>
+
+<td>B</td>
+
+<td>8</td>
+
+</tr>
+
+<tr>
+
+<td>60 - 69</td>
+
+<td>C</td>
+
+<td>7</td>
+
+</tr>
+
+<tr>
+
+<td>50 - 59</td>
+
+<td>D</td>
+
+<td>6</td>
+
+</tr>
+
+<tr>
+
+<td>40 - 49</td>
+
+<td>E</td>
+
+<td>5</td>
+
+</tr>
+
+<tr>
+
+<td>Below 40</td>
+
+<td>F</td>
+
+<td>0</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+Designed with ❤️ using HTML CSS JavaScript
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
